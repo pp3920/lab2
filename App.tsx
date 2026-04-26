@@ -1,0 +1,36 @@
+import { useState } from "react";
+import TextInput from "./Components/TextInput/TextInput";
+import StatsDisplay from "./Components/StatsDisplay/StatsDisplay";
+import CharacterCounter from "./Components/CharacterCounter/CharacterCounter";
+
+
+function App() {
+  const [text, setText] = useState("");
+
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const characters = text.length;
+  const readingTime = Math.ceil(words / 200);
+
+  return (
+    <div className="container mt-4">
+      <h2>Content Tracker</h2>
+
+      <TextInput onTextChange={setText} />
+
+      <StatsDisplay
+        wordCount={words}
+        charCount={characters}
+        readingTime={readingTime}
+      />
+
+      <CharacterCounter
+        wordCount={words}
+        minWords={50}
+        maxWords={300}
+        targetReadingTime={2}
+      />
+    </div>
+  );
+}
+
+export default App;
