@@ -6,8 +6,6 @@ interface TextInputProps {
   initialValue?: string;
 }
 
-
-
 function TextInput(
     
 {
