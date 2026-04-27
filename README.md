@@ -1,25 +1,3 @@
-*How did you handle state updates when the text changed?*
-
-I used a single state variable (text) in the parent component (App) and updated it using setText from the child TextInput component.
-
-Whenever the user types, the onChange event triggers setText, which automatically re-renders the component and updates all derived values (words, characters, reading time).
-
-*How did you ensure the UI remained responsive during rapid text input?*
-
-React handles rapid updates efficiently using its virtual DOM diffing, but I still ensured:
-
-No heavy computations inside render
-Only simple string operations (split, trim)
-No API calls or expensive loops on every keystroke
-Derived calculations kept minimal
-
-What challenges did you face when implementing the statistics calculations?
-
-Main challenges were:
-
-Accurate word count
-placing text properly inside div
-putting word count inside div
 
 
 **Project Details**
