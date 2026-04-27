@@ -24,7 +24,7 @@ putting word count inside div
 
 **Project Details**
 
-# 📊 Text Analyzer App
+#  Text Analyzer App
 
 A simple React + TypeScript application that analyzes user input text and displays:
 
@@ -35,7 +35,7 @@ A simple React + TypeScript application that analyzes user input text and displa
 
 ---
 
-## 🚀 Features
+##  Features
 
 * Real-time text analysis
 * Clean and responsive UI
