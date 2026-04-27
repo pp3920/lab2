@@ -2,23 +2,31 @@
 import React from "react";
 
 export interface StatsDisplayProps {
-  wordCount: number;
-  charCount: number;
-  readingTime: number;
+    wordCount: number;
+    charCount: number;
+    readingTime: number;
 }
 
 const StatsDisplay: React.FC<StatsDisplayProps> = ({
-  wordCount,
-  charCount,
-  readingTime,
+    wordCount,
+    charCount,
+    readingTime,
 }) => {
-  return (
-    <div className="mt-3">
-      <p>Words: {wordCount}</p>
-      <p>Characters: {charCount}</p>
-      <p>Reading Time: {readingTime} min</p>
-    </div>
-  );
+    return (
+        <div className="stats-container">
+            
+            <p>
+                Characters <br />
+                {charCount}
+            </p>
+            <p>
+                Words <br />
+                {wordCount}
+            </p>
+            <p> Reading Time <br />
+                {readingTime} :00 min</p>
+        </div>
+    );
 };
 
 export default StatsDisplay;
